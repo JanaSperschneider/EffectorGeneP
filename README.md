@@ -46,7 +46,9 @@ cd EffectorGeneP_1.0.0
 
 **Step 2**. Download the `EffectorGeneP` model files from [here](https://effectorp.csiro.au/effectorgenep.html). **It is best to save and unzip them in the `EffectorGeneP` directory folder ./EffectorGeneP_Models/.** 
 
-**Optional Step 3**. :exclamation:*This step is optional but desirable to enable sensitive search for genes encoding secreted proteins*. Obtain and install SignalP 4.1 from [here](https://services.healthtech.dtu.dk/services/SignalP-4.1/) and TMHMM 2.0 from [here](https://services.healthtech.dtu.dk/services/TMHMM-2.0/). **Please do not install newer/older versions of SignalP or TMHMM, it is important to use these for accurate and sensitive effector gene annotation and compatibility of output formats**. 
+:exclamation:*This step is optional but desirable to enable sensitive search for genes encoding secreted proteins*. 
+
+**Optional Step 3**. Obtain and install SignalP 4.1 from [here](https://services.healthtech.dtu.dk/services/SignalP-4.1/) and TMHMM 2.0 from [here](https://services.healthtech.dtu.dk/services/TMHMM-2.0/). **Please do not install newer/older versions of SignalP or TMHMM, it is important to use these for accurate and sensitive effector gene annotation and compatibility of output formats**. 
 
 ## Testing `EffectorGeneP` with the toy example
 `EffectorGeneP` requires these input files:
