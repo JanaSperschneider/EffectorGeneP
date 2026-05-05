@@ -44,7 +44,7 @@ Then cd into the directory:
 cd EffectorGeneP_1.0.0
 ```
 
-**Step 2**. Download the `EffectorGeneP` model files from [here](https://effectorp.csiro.au/effectorgenep.html). **It is best to save and unzip them in the `EffectorGeneP` directory folder ./EffectorGeneP_Models/.** :exclamation:Note that only the *Magnaporthe oryzae* model files are included in the Github repository, more models are available [here](https://effectorp.csiro.au/effectorgenep.html).
+**Step 2**. Download the `EffectorGeneP` model files from [here](https://effectorp.csiro.au/effectorgenep.html). **It is best to save and unzip them in the `EffectorGeneP` directory folder ./EffectorGeneP_Models/.** 
 
 **Optional Step 3**. :exclamation:*This step is optional but desirable to enable sensitive search for genes encoding secreted proteins*. Obtain and install SignalP 4.1 from [here](https://services.healthtech.dtu.dk/services/SignalP-4.1/) and TMHMM 2.0 from [here](https://services.healthtech.dtu.dk/services/TMHMM-2.0/). **Please do not install newer/older versions of SignalP or TMHMM, it is important to use these for accurate and sensitive effector gene annotation and compatibility of output formats**. 
 
@@ -151,6 +151,7 @@ python EffectorGeneP.py [-options] -g <genome fasta file>
                                    -m <path to EffectorGeneP model files>
                                    -o <EffectorGeneP GFF3 output file>
 ```
+:exclamation:Note that only the *Magnaporthe oryzae* model files are included in the Github repository, more models are available [here](https://effectorp.csiro.au/effectorgenep.html).
 
 ## Output files
 
