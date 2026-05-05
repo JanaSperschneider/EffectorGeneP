@@ -44,7 +44,7 @@ Then cd into the directory:
 cd EffectorGeneP_1.0.0
 ```
 
-Step 2. Download the `EffectorGeneP` model files from [here](https://effectorp.csiro.au/effectorgenep.html). **It is convenient to save and unzip them in the `EffectorGeneP` directory folder ./EffectorGeneP_Models/.** 
+Step 2. Download the `EffectorGeneP` model files from [here](https://effectorp.csiro.au/effectorgenep.html). **It is best to save and unzip them in the `EffectorGeneP` directory folder ./EffectorGeneP_Models/.** :exclamation: Only the *Magnaporthe oryzae* model files are included in the Github repository, more models are available [here](https://effectorp.csiro.au/effectorgenep.html).
 
 *Optional but desirable to enable sensitive search for genes encoding secreted proteins*
 
