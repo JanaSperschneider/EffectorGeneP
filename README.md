@@ -143,7 +143,8 @@ stringtie --merge -l MSTRG -o StringTie.gtf StringTie.Rep1.gtf StringTie.Rep2.gt
 # It is essential to convert gtf to gff3 with gffread (https://github.com/gpertea/gffread) for input into EffectorGeneP
 gffread StringTie.gtf > EffectorGeneP_input_transcripts.gff3
 ```
-Note: only use gffread (https://github.com/gpertea/gffread) to format your gtf/gff3 transcript input file for input into `EffectorGeneP`. **If you skip this step, `EffectorGeneP` might not parse your input file correctly.** 
+
+:exclamation:Note: you have to use gffread (https://github.com/gpertea/gffread) to format your gtf/gff3 transcript input file before you input it into `EffectorGeneP`. **If you skip this step, `EffectorGeneP` might not parse your input file correctly.**:exclamation:
 
 Lastly, you can run `EffectorGeneP` on the transcripts as follows:
 
