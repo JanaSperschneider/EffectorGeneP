@@ -33,7 +33,7 @@ Gene annotation is crucial for accurate inference of biological knowledge from g
 
 To get `EffectorGeneP` to work on your local machine, follow these steps:
 
-Step 1. Download the latest release from this github repo (e.g. EffectorGeneP_1.0.0.zip) or alternatively you can clone the github repo (git clone https://github.com/JanaSperschneider/EffectorGeneP.git).
+**Step 1**. Download the latest release from this github repo (e.g. EffectorGeneP_1.0.0.zip) or alternatively you can clone the github repo (git clone https://github.com/JanaSperschneider/EffectorGeneP.git).
 
 Unpack `EffectorGeneP` in your desired location if you downloaded a release:
 ```
@@ -44,11 +44,9 @@ Then cd into the directory:
 cd EffectorGeneP_1.0.0
 ```
 
-Step 2. Download the `EffectorGeneP` model files from [here](https://effectorp.csiro.au/effectorgenep.html). **It is best to save and unzip them in the `EffectorGeneP` directory folder ./EffectorGeneP_Models/.** :exclamation: Only the *Magnaporthe oryzae* model files are included in the Github repository, more models are available [here](https://effectorp.csiro.au/effectorgenep.html).
+**Step 2**. Download the `EffectorGeneP` model files from [here](https://effectorp.csiro.au/effectorgenep.html). **It is best to save and unzip them in the `EffectorGeneP` directory folder ./EffectorGeneP_Models/.** :exclamation:Note that only the *Magnaporthe oryzae* model files are included in the Github repository, more models are available [here](https://effectorp.csiro.au/effectorgenep.html).
 
-*Optional but desirable to enable sensitive search for genes encoding secreted proteins*
-
-Optional step 3. Obtain and install SignalP 4.1 from [here](https://services.healthtech.dtu.dk/services/SignalP-4.1/) and TMHMM 2.0 from [here](https://services.healthtech.dtu.dk/services/TMHMM-2.0/). **Please do not install newer/older versions of SignalP or TMHMM, it is important to use these for accurate and sensitive effector gene annotation and compatibility of output formats**. 
+**Optional Step 3**. :exclamation:*This step is optional but desirable to enable sensitive search for genes encoding secreted proteins*. Obtain and install SignalP 4.1 from [here](https://services.healthtech.dtu.dk/services/SignalP-4.1/) and TMHMM 2.0 from [here](https://services.healthtech.dtu.dk/services/TMHMM-2.0/). **Please do not install newer/older versions of SignalP or TMHMM, it is important to use these for accurate and sensitive effector gene annotation and compatibility of output formats**. 
 
 ## Testing `EffectorGeneP` with the toy example
 `EffectorGeneP` requires these input files:
