@@ -1,0 +1,85 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-classpath
+'/home/spe12g/.m2/repository/com/github/vbmacher/java-cup-runtime/11b-20160615/java-cup-runtime-11b-20160615.jar:/home/spe12g/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar:/home/spe12g/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar:/home/spe12g/.m2/repository/org/glassfish/jaxb/txw2/2.3.2/txw2-2.3.2.jar:/home/spe12g/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.8/istack-commons-runtime-3.0.8.jar:/home/spe12g/.m2/repository/org/jvnet/staxex/stax-ex/1.8.1/stax-ex-1.8.1.jar:/home/spe12g/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.16/FastInfoset-1.2.16.jar:/home/spe12g/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/home/spe12g/EffectorGeneP_1.0_Release/src/main/java:/home/spe12g/EffectorGeneP_1.0_Release/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2026. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:none
+-doctitle
+'weka-csiro-agriculture-and-food 0.0.1-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' '/home/spe12g/EffectorGeneP_1.0_Release/target/javadoc-bundle-options'
+-nohelp
+-use
+-version
+-windowtitle
+'weka-csiro-agriculture-and-food 0.0.1-SNAPSHOT API'
+weka.classifiers
+weka.classifiers.bayes
+weka.classifiers.evaluation
+weka.classifiers.evaluation.output.prediction
+weka.classifiers.functions
+weka.classifiers.misc
+weka.classifiers.pmml.producer
+weka.classifiers.rules
+weka.classifiers.trees
+weka.classifiers.trees.j48
+weka.clusterers
+weka.core
+weka.core.converters
+weka.core.expressionlanguage.common
+weka.core.expressionlanguage.core
+weka.core.expressionlanguage
+weka.core.expressionlanguage.parser
+weka.core.expressionlanguage.weka
+weka.core.matrix
+weka.core.pmml
+weka.core.pmml.jaxbbindings
+weka.estimators
+weka.experiment
+weka.filters
+weka.filters.supervised.attribute
+weka.filters.unsupervised.attribute
+/home/spe12g/.m2/repository/com/github/vbmacher/java-cup-runtime/11b-20160615/java-cup-runtime-11b-20160615.jar = 1472900492000
+/home/spe12g/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar = 1546443143000
+/home/spe12g/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar = 1545924667000
+/home/spe12g/.m2/repository/org/glassfish/jaxb/txw2/2.3.2/txw2-2.3.2.jar = 1546443131000
+/home/spe12g/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.8/istack-commons-runtime-3.0.8.jar = 1545922178000
+/home/spe12g/.m2/repository/org/jvnet/staxex/stax-ex/1.8.1/stax-ex-1.8.1.jar = 1545923667000
+/home/spe12g/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.16/FastInfoset-1.2.16.jar = 1545921240000
+/home/spe12g/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar = 1542752191000
+/home/spe12g/EffectorGeneP_1.0_Release/src/main/java = 1774394470000
+/home/spe12g/EffectorGeneP_1.0_Release/target/generated-sources/annotations = 1777943775878
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/element-list = 1777943789306
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/constant-values.html = 1777943789431
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/serialized-form.html = 1777943789487
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/overview-tree.html = 1777943790195
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/deprecated-list.html = 1777943790198
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/index.html = 1777943790202
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/allclasses-index.html = 1777943790402
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/allpackages-index.html = 1777943790404
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/module-search-index.js = 1777943790406
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/package-search-index.js = 1777943790407
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/type-search-index.js = 1777943790408
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/member-search-index.js = 1777943790417
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/tag-search-index.js = 1777943790417
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/index-all.html = 1777943790566
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/overview-summary.html = 1777943790569
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/stylesheet.css = 1777943790571
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/script.js = 1777943790572
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/search.js = 1777943790574
+/home/spe12g/EffectorGeneP_1.0_Release/target/reports/apidocs/jquery-ui.overrides.css = 1777943790590

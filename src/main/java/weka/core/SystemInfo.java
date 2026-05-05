@@ -1,0 +1,133 @@
+/*
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+
+/*
+ *    SystemInfo.java
+ *    Copyright (C) 2005-2012 University of Waikato, Hamilton, New Zealand
+ *
+ */
+package weka.core;
+
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.Properties;
+import java.util.Vector;
+
+/**
+ * This class prints some information about the system setup, like Java version,
+ * JVM settings etc. Useful for Bug-Reports.
+ * 
+ * @author FracPete (fracpete at waikato dot ac dot nz)
+ * @version $Revision: 10203 $
+ */
+public class SystemInfo implements RevisionHandler {
+
+  /** for storing the information */
+  private Hashtable<String, String> m_Info = null;
+
+  /**
+   * initializes the object and reads the system information
+   */
+  public SystemInfo() {
+    m_Info = new Hashtable<String, String>();
+    readProperties();
+  }
+
+  /**
+   * reads all the properties and stores them in the hashtable
+   */
+  private void readProperties() {
+    Properties props;
+    Enumeration<?> enm;
+    String name;
+    String[] laf;
+    String tmpStr;
+    int i;
+
+    m_Info.clear();
+
+    // System information
+    props = System.getProperties();
+    enm = props.propertyNames();
+    while (enm.hasMoreElements()) {
+      name = (String) enm.nextElement();
+      m_Info.put(name, (String) props.get(name));
+    }
+
+    // additional WEKA info
+    m_Info.put("weka.version", Version.VERSION);
+  }
+
+  /**
+   * returns a copy of the system info. the key is the name of the property and
+   * the associated object is the value of the property (a string).
+   */
+  public Hashtable<String, String> getSystemInfo() {
+    return new Hashtable<String, String>(m_Info);
+  }
+
+  /**
+   * returns a string representation of all the system properties
+   */
+  @Override
+  public String toString() {
+    Enumeration<String> enm;
+    String result;
+    String key;
+    Vector<String> keys;
+    int i;
+    String value;
+
+    result = "";
+    keys = new Vector<String>();
+
+    // get names and sort them
+    enm = m_Info.keys();
+    while (enm.hasMoreElements()) {
+      keys.add(enm.nextElement());
+    }
+    Collections.sort(keys);
+
+    // generate result
+    for (i = 0; i < keys.size(); i++) {
+      key = keys.get(i).toString();
+      value = m_Info.get(key).toString();
+      if (key.equals("line.separator")) {
+        value = Utils.backQuoteChars(value);
+      }
+      result += key + ": " + value + "\n";
+    }
+
+    return result;
+  }
+
+  /**
+   * Returns the revision string.
+   * 
+   * @return the revision
+   */
+  @Override
+  public String getRevision() {
+    return RevisionUtils.extract("$Revision: 10203 $");
+  }
+
+  /**
+   * for printing the system info to stdout.
+   */
+  public static void main(String[] args) {
+    System.out.println(new SystemInfo());
+  }
+}
