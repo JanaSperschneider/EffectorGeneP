@@ -193,7 +193,7 @@ Advanced options are:
 
 * Q: Does `EffectorGeneP` give me a complete gene annotation?
 
-Like TransDecoder (https://github.com/TransDecoder/TransDecoder), `EffectorGeneP` identifies candidate coding regions and genes within transcript sequences. Thus, it will currently only annotate genes that are expressed based on the transcripts you provide. Best practice for gene annotation is to merge evidence from multiple tools into a high-quality annotation. For targeted effector search such as in a defined genomic interval, `EffectorGeneP` can be used as a standalone tool. 
+Like TransDecoder (https://github.com/TransDecoder/TransDecoder), `EffectorGeneP` identifies candidate coding regions and genes within transcript sequences. Thus, it will currently only annotate genes that are expressed based on the transcripts you provide. Best practice for gene annotation is to merge evidence from multiple tools into a high-quality annotation. For targeted effector search such as in a defined genomic interval with high-quality transcriptional data from infection, `EffectorGeneP` can be used as a standalone tool. 
 
 * Q: Can I somehow provide protein homology evidence to `EffectorGeneP`?
 
