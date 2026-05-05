@@ -1,0 +1,31 @@
+Software Licence Agreement 
+EffectorGeneP: Gene Annotation in Pathogen Genomes [version 1.0]
+© Commonwealth Scientific Industrial and Research Organisation (CSIRO)
+
+1.	CSIRO grants you, free of charge, a non-exclusive and non-transferable right under CSIRO’s copyrights to copy, run, modify, merge, adapt, display and publish the software (in its source and binary forms) and associated data models, manual or documentation solely for the purpose of non-commercial scientific research or education.
+
+Any use for commercial purposes (including incorporating in a commercial product or use to provide a commercial service) is not permitted. 
+
+2.	You are free to use and publish any annotation outputs generated from your use of the software.
+
+3.	All reproductions of the software and associated manual or documentation must retain the original copyright notices and disclaimers.
+
+4.	This software embodies inventions that are the subject of claims in CSIRO’s Australian patent application no. 2025201797 titled Gene Annotation, and may be covered by one or more patents derived from, or any patent application claiming priority from, Australia patent application no. 2025201797 and international patent application no. PCT/AU2026/050213.
+
+CSIRO will grant you a royalty-free, non-exclusive and non-transferable licence, under those essential claims of CSIRO patents that are infringed by your use of the software, solely to the extent necessary for you to exercise your rights to the software under the copyright licence CSIRO has granted you.  This patent licence will be limited to use of the version of the software codes and to the species of the species models provided by CSIRO.
+
+No other express or implied licences to CSIRO’s patent rights are granted by this licence and CSIRO reserves all rights. 
+
+5.	CSIRO has no obligation to provide you with support, maintenance, bug fixes or updates for this software.
+
+6.	CSIRO’s name, trade mark or logo may not be used to endorse or promote products derived from this software without prior written permission from CSIRO.
+
+7.	This software may contain third party material obtained by CSIRO under licence or require software made freely available by third parties for research and development to operate efficiently.  Your right to such third party material to use the software under this agreement is subject to any separate licence terms identified by CSIRO as part of its software release. Those third party licence terms may require you to download the relevant software from a third party site, or may mean that the third party licensor (and not CSIRO) grants you a licence directly for those components of the software. It is your responsibility to ensure that you have the necessary rights to such third party material. 
+
+You agree to maintain and reproduce all copyright and proprietary notices required by third parties for any third party material.
+
+8.	THIS SOFTWARE IS PROVIDED BY CSIRO “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL CSIRO BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+9.	The licences granted by CSIRO will terminate if you breach the terms of this agreement.
+
+10.	This agreement is interpreted and construed according to the laws of the Australian Capital Territory, Australia.
