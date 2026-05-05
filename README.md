@@ -191,11 +191,11 @@ Advanced options are:
 
 ## FAQs
 
-* Q: Does `EffectorGeneP` give me a complete gene annotation?
+:question: Does `EffectorGeneP` give me a complete gene annotation?
 
 Like TransDecoder (https://github.com/TransDecoder/TransDecoder), `EffectorGeneP` identifies candidate coding regions and genes within transcript sequences. Thus, it will currently only annotate genes that are expressed based on the transcripts you provide. Best practice for gene annotation is to merge evidence from multiple tools into a high-quality annotation. For targeted effector search such as in a defined genomic interval with high-quality transcriptional data from infection, `EffectorGeneP` can be used as a standalone tool. 
 
-* Q: Can I somehow provide protein homology evidence to `EffectorGeneP`?
+:question: Can I somehow provide protein homology evidence to `EffectorGeneP`?
 
 Yes, it is possible to include homology evidence in the `EffectorGeneP` pipeline by combining transcripts with pseudo-transcripts derived from protein mappings to the reference genome. One could run a pipeline roughly like this:
 
@@ -211,15 +211,15 @@ gffread evidence.combined.gtf > combined.gff3
 # Provide the file combined.gff3 file as input to `EffectorGeneP`
 ```
 
-* Q: `EffectorGeneP` is slow, how can I speed it up?
+:question: `EffectorGeneP` is slow, how can I speed it up?
 
 `EffectorGeneP` can be launched for each contig/scaffold/chromosome individually and all the individual output GFF3 files can then be concatenated into a full annotation GFF3 file. A simple job array will do the job and substantially speed up the annotation. 
 
-* Q: There is no species model for my pathogen of interest, what do I do?
+:question: There is no species model for my pathogen of interest, what do I do?
 
 You can choose a closely related species to run `EffectorGeneP`. Have a look at the species models available here: https://effectorp.csiro.au/effectorgenep.html
 
-* Q: Can I apply `EffectorGeneP` to a bacterial pathogen genomes?
+:question: Can I apply `EffectorGeneP` to a bacterial pathogen genomes?
 
 Not recommended at all as `EffectorGeneP` has only been trained on fungal genomes which have very different gene coding properties.
 
