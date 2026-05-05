@@ -8,9 +8,9 @@ Gene annotation is crucial for accurate inference of biological knowledge from g
 
 #### What do I need for running `EffectorGeneP`?
 
-? A fungal (or at least eukaryotic) pathogen genome
+✅ A fungal (or at least eukaryotic) pathogen genome
 
-? Infection transcriptome data (RNA-Seq or Iso-Seq)
+✅ Infection transcriptome data (RNA-Seq or Iso-Seq)
 
  ![GitHub_WorkFlow_Figure](https://github.com/user-attachments/assets/326b19cd-1c82-46f4-95b8-812d8a078999)
 
