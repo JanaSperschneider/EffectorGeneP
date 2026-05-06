@@ -30,6 +30,7 @@ Gene annotation is crucial for accurate inference of biological knowledge from g
 `EffectorGeneP` has been written in Python3 and has the following base requirements:
 
 * Python3, BioPython and Numpy (for general processing)
+* Java for running the machine learning classification (WEKA)
 
 To get `EffectorGeneP` to work on your local machine, follow these steps:
 
@@ -225,7 +226,7 @@ Not recommended at all as `EffectorGeneP` has only been trained on fungal genome
 
 
 ## Citation
-If you use `EffectorGeneP` in your work please cite our preprint: xxx
+If you use `EffectorGeneP` in your work please cite our preprint: https://www.biorxiv.org/content/10.64898/2026.05.04.722827v1
 
 ## License
 
