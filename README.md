@@ -12,7 +12,7 @@ Gene annotation is crucial for accurate inference of biological knowledge from g
 
 ✅ Infection transcriptome data (RNA-Seq or Iso-Seq)
 
- ![GitHub_WorkFlow_Figure](https://github.com/user-attachments/assets/326b19cd-1c82-46f4-95b8-812d8a078999)
+<img width="836" height="218" alt="GitHub_WorkFlow_Figure" src="https://github.com/user-attachments/assets/bc66bfe0-477c-4f3d-9db6-0823e34a10fa" />
 
 # Table of contents
 * [Installing `EffectorGeneP`](#installing-effectorgenep)
@@ -108,7 +108,7 @@ NC_017854.1     EffectorGeneP   CDS     1289890 1290029 .       -       0       
 
 ## Prepare your own input data
 
-![GitHub_WorkFlow_Figure_Alignment](https://github.com/user-attachments/assets/aaf3350d-d954-4dce-aa5c-7412043c5a0b)
+<img width="3704" height="1148" alt="GitHub_WorkFlow_Figure_Alignment" src="https://github.com/user-attachments/assets/48fdd0b1-c3ee-48d6-9ab4-29a82a6243b5" />
 
 The first step is to gather your RNA-seq infection data and align each replicate/sample to your genome. For example, for gene-dense fungal genomes one could use STAR (https://github.com/alexdobin/STAR) in 2-pass mode as follows:
 
