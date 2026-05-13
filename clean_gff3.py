@@ -14,7 +14,6 @@ import sys
 import re
 import random
 import functions
-import numpy as np
 import subprocess as sub
 
 from Bio import SeqIO
