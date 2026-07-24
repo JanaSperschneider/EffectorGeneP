@@ -732,7 +732,7 @@ for transcript_id, ORFs in ORFs_FINAL_SCORES.items():
                 isoform = COORDINATES[(start, end, score)]
                 total_transcript_coverage += isoform[-1]
 
-            if float(total_transcript_coverage) > len(genes_chosen) * variables.MIN_TRANSCRIPT_COVERAGE:
+            if float(total_transcript_coverage) > len(genes_chosen) * variables.MIN_TRANSCRIPT_COVERAGE_FUSION:
 
                 ### Now need to add these to the final gene lists!
                 for (start, end, score) in genes_chosen:                    
