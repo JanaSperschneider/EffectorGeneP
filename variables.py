@@ -26,6 +26,7 @@ MIN_GENE_LENGTH_SCORE_LOG_TRANSCRIPT_FUSION = 5.7
 # -----------------------------------------------------------------------------------------------------------
 STRAND_PENALTY = 20.0
 MIN_TRANSCRIPT_COVERAGE = 5.0
+MIN_TRANSCRIPT_COVERAGE_FUSION = 25.0
 TRANSCRIPT_FUSION_BEST_GENE_COVERAGE = 75.0
 # -----------------------------------------------------------------------------------------------------------
 CODING_WEIGHT = 3.0
