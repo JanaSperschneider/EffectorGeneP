@@ -676,7 +676,7 @@ for transcript_id, ORFs in ORFs_FINAL_SCORES.items():
     if investigate_transcript_fusions == True:
 
         # Include the ORF with the highest score by default
-        for (encoded_protein, gene_score, cds_score, full_id, short_id, transcript_start, transcript_end, cds_start, cds_end, strand, kozak_score, transcript_coverage) in ORFs:
+        for (encoded_protein, gene_score, cds_score, full_id, short_id, transcript_start, transcript_end, cds_start, cds_end, strand, kozak_score, transcript_coverage) in ORFs:            
 
             if full_id == ORF_ID_highest_score:
                 intervals.append( transcript_fusions.GeneInterval(cds_start - variables.CDS_SPACER, cds_end + variables.CDS_SPACER, 1000000.0) )
@@ -695,12 +695,12 @@ for transcript_id, ORFs in ORFs_FINAL_SCORES.items():
                 # Note that the UTR scores are not ideal and should be re-calculated in the future
                 # ------------------------------------------------------------
                 ## Make sure to use overall length including introns here
-                # ------------------------------------------------------------
+                # ------------------------------------------------------------                
                 cds_length = cds_end-cds_start+1
                 intron_length = sum([entry[2]-entry[1]+1 for entry in ORF_blocks[full_id] if entry[0] == 'Intron'])
                 cds_end_with_introns = cds_end + intron_length
 
-                gene_score_length = scores.weighted_gene_score(cds_length, intron_length, gene_score)
+                gene_score_length = scores.weighted_gene_score(cds_length, intron_length, gene_score)                
 
                 COORDINATES[(cds_start - variables.CDS_SPACER, cds_end + variables.CDS_SPACER, gene_score_length)] = (encoded_protein, gene_score, cds_score, full_id, short_id, transcript_start, transcript_end, cds_start, cds_end, strand, kozak_score, transcript_coverage)
 
@@ -732,17 +732,32 @@ for transcript_id, ORFs in ORFs_FINAL_SCORES.items():
                 isoform = COORDINATES[(start, end, score)]
                 total_transcript_coverage += isoform[-1]
 
-            if float(total_transcript_coverage) > len(genes_chosen) * variables.MIN_TRANSCRIPT_COVERAGE_FUSION:
+            if len(genes_chosen) == 1.0:
 
-                ### Now need to add these to the final gene lists!
-                for (start, end, score) in genes_chosen:                    
-                    isoform = COORDINATES[(start, end, score)]
+                if float(total_transcript_coverage) > variables.MIN_TRANSCRIPT_COVERAGE:
 
-                    if transcript_id in GENE_ISOFORMS_DIC_CHOSEN:
-                        GENE_ISOFORMS_DIC_CHOSEN[transcript_id] = GENE_ISOFORMS_DIC_CHOSEN[transcript_id] + [isoform]
-                    else:
-                        GENE_ISOFORMS_DIC_CHOSEN[transcript_id] = [isoform]
+                    ### Now need to add these to the final gene lists!
+                    for (start, end, score) in genes_chosen:                    
+                        isoform = COORDINATES[(start, end, score)]
 
+                        if transcript_id in GENE_ISOFORMS_DIC_CHOSEN:
+                            GENE_ISOFORMS_DIC_CHOSEN[transcript_id] = GENE_ISOFORMS_DIC_CHOSEN[transcript_id] + [isoform]
+                        else:
+                            GENE_ISOFORMS_DIC_CHOSEN[transcript_id] = [isoform]
+
+            if len(genes_chosen) > 1.0:
+                if float(total_transcript_coverage) > variables.MIN_TRANSCRIPT_COVERAGE_FUSION:
+
+                    ### Now need to add these to the final gene lists!
+                    for (start, end, score) in genes_chosen:                    
+                        isoform = COORDINATES[(start, end, score)]
+
+                        if transcript_id in GENE_ISOFORMS_DIC_CHOSEN:
+                            GENE_ISOFORMS_DIC_CHOSEN[transcript_id] = GENE_ISOFORMS_DIC_CHOSEN[transcript_id] + [isoform]
+                        else:
+                            GENE_ISOFORMS_DIC_CHOSEN[transcript_id] = [isoform]
+
+    # no transcript fusions will be investigated
     else:
         highest_score = 0.0
 
