@@ -168,6 +168,8 @@ def write_gff3_noUTRs_to_file(GENE_ISOFORMS_DIC_CHOSEN, transcript_information, 
 		if to_be_deleted == False:
 			gff3_output_lines_clean.append(line)
 
+	print("EffectorGeneP will now write", len(gff3_output_lines_clean), "lines in the output gff3 file.")
+	
 	for line in gff3_output_lines_clean:
 		out_handle.writelines(line + '\n')
 
@@ -333,6 +335,8 @@ def write_gff3_noUTRs_secretome_to_file(transcripts_to_delete, GENE_ISOFORMS_DIC
 		if to_be_deleted == False:
 			gff3_output_lines_clean.append(line)
 
+	print("EffectorGeneP will now write", len(gff3_output_lines_clean), "lines in the output gff3 file.")
+	
 	for line in gff3_output_lines_clean:
 		out_handle.writelines(line + '\n')
 		
