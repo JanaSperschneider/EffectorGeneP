@@ -50,7 +50,7 @@ def gff3_read_exons(gff3_file_content):
 	            transcript_end = int(line.split('\t')[4])
 	            transcript_information[transcript_id] = (contig, transcript_start, transcript_end, gene_id, strand)
 
-	        elif line.split('\t')[2] == 'exon' or line.split('\t')[2] == 'CDS':
+	        elif line.split('\t')[2] == 'exon':
 	            transcript_id = identifier_line.split('Parent=')[1].split(';')[0].strip()
 	            # Note: here we convert to 0-based 
 	            exon_start = int(line.split()[3]) - 1 
