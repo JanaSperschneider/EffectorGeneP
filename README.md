@@ -34,7 +34,7 @@ Gene annotation is crucial for accurate inference of biological knowledge from g
 
 To get `EffectorGeneP` to work on your local machine, follow these steps:
 
-**Step 1**. Download the latest release from this github repo (e.g. EffectorGeneP_1.0.0.zip) or alternatively for the latest version you can clone the github repo (git clone https://github.com/JanaSperschneider/EffectorGeneP.git).
+**Step 1**. Download the latest release from this github repo (i.e. download EffectorGeneP_1.0.0.zip, *not* the Source code zip/tar.gz files) or alternatively for the latest version you can simply clone the github repo (git clone https://github.com/JanaSperschneider/EffectorGeneP.git).
 
 Unpack `EffectorGeneP` in your desired location if you downloaded a release:
 ```
