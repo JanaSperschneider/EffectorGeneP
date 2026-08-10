@@ -214,7 +214,91 @@ gffread evidence.combined.gtf > combined.gff3
 
 :question: `EffectorGeneP` is slow, how can I speed it up?
 
-`EffectorGeneP` can be launched for each contig/scaffold/chromosome individually and all the individual output GFF3 files can then be concatenated into a full annotation GFF3 file. A simple job array will do the job and substantially speed up the annotation. 
+`EffectorGeneP` can be launched for each contig/scaffold/chromosome individually and all the individual output GFF3 files can then be concatenated into a full annotation GFF3 file. A simple job array will do the job and substantially speed up the annotation. For this, one could first use samtools to generate a list of contigs, split the input gff3 per contig and launch EffectorGeneP for each of these contig gff3 files:
+
+```
+# First, get the contig list for your genome
+samtools faidx ${genome}
+cat ${genome}.fai | cut -f1 > contigs.txt
+
+# Now get the number of jobs that need to be run for a job array script
+NUM_CONTIGS=$(wc -l < contigs.txt)
+echo ${NUM_CONTIGS} "contigs will be annotated by EffectorGeneP."
+
+# Then, launch your job array script like so:
+sbatch --array=1-${NUM_CONTIGS}%50 EffectorGenes_JobArray.sh -a EffectorGeneP_input_transcripts.gff3 \
+  -b ${OUTPUT_DIRECTORY} -c ${genome} -d ./EffectorGeneP_Models/Magnaporthe_oryzae/
+```
+You would then need to have a job array script (called EffectorGenes_JobArray.sh in this example) written up like so:
+
+```
+#!/usr/bin/env bash
+
+#SBATCH --time=12:00:00
+#SBATCH --job-name=EffectorGeneP_Array
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=5GB
+#SBATCH --output=path_to_logfile_folder/effectorgenep_%A_%a.out
+
+############################################################
+module load python
+############################################################
+export OMP_NUM_THREADS=${SLURM_NTASKS}
+helpFunction()
+{
+   echo ""
+   echo "Usage: $0 -a INPUT_FILE -b OUTPUT_DIRECTORY -c GENOME_FASTA -d PATH_TO_MODELS"
+   echo -e "\t-a the path to the INPUT GFF3 file"
+   echo -e "\t-b the desired output directory for the EffectorGeneP annotations"      
+   echo -e "\t-c the genome FASTA file"         
+   echo -e "\t-d the path to the EffectorGeneP model files"         
+   exit 1 # Exit script after printing help
+}
+############################################################
+while getopts "a:b:c:d:" opt
+do
+   case "$opt" in
+      a ) INPUT_FILE="$OPTARG" ;;
+      b ) OUTPUT_DIRECTORY="$OPTARG" ;;
+      c ) GENOME="$OPTARG" ;;
+      d ) PATH_TO_MODELS="$OPTARG" ;;
+      ? ) helpFunction ;; # Print helpFunction in case parameter is non-existent
+   esac
+done
+############################################################
+# Print helpFunction in case parameters are empty
+if [ -z "$INPUT_FILE" ] || [ -z "$OUTPUT_DIRECTORY" ] || [ -z "$GENOME" ] || [ -z "$PATH_TO_MODELS" ]
+then
+   echo "Some or all of the parameters are empty";
+   helpFunction
+fi
+############################################################
+# Fetch the specific file path using the current array index line number
+contig=$(sed -n "${SLURM_ARRAY_TASK_ID}p" contigs.txt)
+
+awk -v search="${contig}" '$1 ~ /^#/ {print $0;next} {if ($1 == search) print}' $INPUT_FILE > $OUTPUT_DIRECTORY/"${contig}".gff3
+
+echo ${contig}
+mkdir OUTPUT_DIRECTORY
+
+OUTPUT_FILE=${OUTPUT_DIRECTORY}"${contig}".EffectorGeneP.gff3
+############################################################
+# Begin script in case all parameters are correct
+echo "-----------------"
+echo "Use this input transcript assembly file (gffread-formatted):" $OUTPUT_DIRECTORY/"${contig}".gff3
+echo "-----------------"
+echo "Write the gene prediction files to this output file:" $OUTPUT_FILE
+echo "-----------------"
+echo "Use this genome FASTA file:" $GENOME
+echo "-----------------"
+echo "Use these EffectorGeneP model files:" $PATH_TO_MODELS
+echo "-----------------"
+############################################################
+python EffectorGeneP.py -g ${GENOME} -t $OUTPUT_DIRECTORY/"${contig}".gff3 -m ${PATH_TO_MODELS} -o ${OUTPUT_FILE}
+############################################################
+```
+After all jobs are finished, you would then need to simply concatenate the individual gff3 output files.
 
 :question: There is no species model for my pathogen of interest, what do I do?
 
