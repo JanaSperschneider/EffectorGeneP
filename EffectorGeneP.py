@@ -129,7 +129,7 @@ print("Strand stringency:", STRANDEDNESS)
 print("Transcript padding (bps):", TRANSCRIPT_PADDING)
 print("Path to SignalP 4.1:", SIGNALP_PATH)
 print("Path to TMHMM 2.0:", TMHMM_PATH)
-print("How far upstream to look for another translation start site (aas):", START_SITE_DISTANCE_MAX)
+print("How far downstream from the first M to look for another translation start site (aas):", START_SITE_DISTANCE_MAX)
 print("Minimum average intron probability for multi-exon genes:", INTRON_MIN_PROB)
 if CONSERVATIVE == True:
     print("Genes are annotated in conservative mode.")
