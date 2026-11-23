@@ -123,7 +123,7 @@ def usage():
     print("--TMHMM : path to tmhmm 2.0 executable")
     print()
     print("Advanced options are:")
-    print("-d/--distance <int> : how far upstream to look for another translation start site, measured in encoded protein length (default: 70 aas, equates 210 nts)")       
+    print("-d/--distance <int> : how far downstream from the first M to look for another translation start site, measured in encoded protein length (default: 70 aas, equates 210 nts)")       
     print("-i/--intron <float> : for a multi-exon gene, average intron probability has to be >= <float> (default: 0.6, range from [0:1])")
     print()
     print("-h/--help : show brief help on usage")
